@@ -30,7 +30,14 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = {
+    name: `BBQ Chicken`,
+    price: 10.99,
+    category: `entree`,
+    popularity: 9,
+    rating: 4.75,
+    tags: [`meat`,`premium`,`customer favorites`]
+}
 
 
 
@@ -42,7 +49,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -52,7 +59,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -62,7 +69,8 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+let {price} = pizza
+console.log(price)
 
 
 /*
@@ -72,7 +80,8 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+let {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,7 +96,48 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
+let foodArr = [
+    {
+        name: `Spinach Artichoke Dip`,
+        price: 7.99,
+        category: `appetizer`,
+        popularity: 7,
+        rating: 4.45,
+        tags: [`side`,`vegetarian`]
+    },
+    {
+        name: `Chicken Strips`,
+        price: 6.66,
+        category: `Kid's Meal`,
+        popularity: 10,
+        rating: 4.9,
+        tags: [`meat`,`kids`,`customer favorites`]
+    },
+    {
+        name: `Buffalo Wings`,
+        price: 9.99,
+        category: `appetizer`,
+        popularity: 8,
+        rating: 4.6,
+        tags: [`meat`,`customer favorites`]
+    },
+    {
+        name: `Squid Ink Pasta`,
+        price: 22.99,
+        category: `entree`,
+        popularity: 5,
+        rating: 4,
+        tags: [`experimental`,`premium`,]
+    },
+    {
+        name: `Long Island Iced Tea`,
+        price: 7.50,
+        category: `drinks`,
+        popularity: 9,
+        rating: 4.77,
+        tags: [`alcohol`,`cocktails`,`customer favorites`]
+    }
+]
 
 
 
@@ -103,9 +153,10 @@
     your food objects has.
 */
 
-//CODE HERE
+const checkCategory = 
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+
+const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 
 
