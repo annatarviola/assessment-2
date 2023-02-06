@@ -21,9 +21,7 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
-
-
+const greetUser = username => console.log(`Welcome back, ${username}`)
 
 
 
@@ -50,7 +48,14 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-
+const canWeDeliver = zipCode => {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++){
+        if (deliveryAreaZipCodes[i] === zipCode){
+            return console.log(`You are eligible for delivery`)
+        }
+    }
+    return console.log(`Sorry, you are out of our delivery zone`)
+}
 
 
 /* 
@@ -71,6 +76,14 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliverTwo = zipCode => {
+    let canDeliver = deliveryAreaZipCodes.includes(zipCode)
+    if (canDeliver) {
+        return console.log(`You are eligible for delivery`)
+    } else {
+        return console.log(`Sorry, you are out of our delivery zone`)
+    }
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -106,9 +119,7 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
-
-
+deals[0].title = deals[0].title.replace('15','10')
 
 /*
     The restaurant is going to continue its
@@ -123,4 +134,6 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+deals[1].desc = deals[1].desc.replace('March','April').trim()
+
+console.log(deals[1])
