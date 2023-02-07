@@ -153,12 +153,9 @@ let foodArr = [
     your food objects has.
 */
 
-const checkCategory = 
+const filteredFood = foodArr.filter((foodArr, tag) => foodArr.tags === tag)
 
-
-const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
