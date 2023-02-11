@@ -34,11 +34,9 @@ const cart = [
 ]
 
 //CODE HERE
+const reducer = (accumulator, currentValue) => accumulator + currentValue.price
 
-
-const summedPrice = cart.reduce((acc, cur) => {
-    return acc + cur.price
-})
+const summedPrice = cart.reduce(reducer, 0);
 
 console.log(summedPrice)
 
@@ -58,12 +56,10 @@ console.log(summedPrice)
 */
 
 function calcFinalPrice(cartTotal, couponValue, tax) {
-    let finalPrice = cartTotal * tax
+    let finalPrice = cartTotal + (cartTotal * tax)
     finalPrice -= couponValue
     return finalPrice
 }
-
-
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -86,7 +82,11 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
 */
 
 /*
-    TEXT ANSWER HERE
+    Name: to identify the customer
+    Email: to contact customer
+    Phone Number: to contact customer
+    Order Number: to keep track of order
+    Order Items: to organize order
 
 */
 
@@ -95,4 +95,10 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    name: 'Lamp Milkshade',
+    email: 'bongwaterofthelord12@aol.com',
+    phoneNumber: '(777) 123-4567',
+    orderNumber: 665,
+    orderItems: ['pizza','wings','beer']
+}
