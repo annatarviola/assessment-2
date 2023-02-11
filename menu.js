@@ -103,7 +103,7 @@ let foodArr = [
         category: `appetizer`,
         popularity: 7,
         rating: 4.45,
-        tags: [`side`,`vegetarian`]
+        tags: [`appetizer`,`vegetarian`]
     },
     {
         name: `Chicken Strips`,
@@ -111,7 +111,7 @@ let foodArr = [
         category: `Kid's Meal`,
         popularity: 10,
         rating: 4.9,
-        tags: [`meat`,`kids`,`customer favorites`]
+        tags: [`meat`,`kids`,`customer favorites`, `entree`]
     },
     {
         name: `Buffalo Wings`,
@@ -119,7 +119,7 @@ let foodArr = [
         category: `appetizer`,
         popularity: 8,
         rating: 4.6,
-        tags: [`meat`,`customer favorites`]
+        tags: [`meat`,`customer favorites`,`appetizer`]
     },
     {
         name: `Squid Ink Pasta`,
@@ -127,7 +127,7 @@ let foodArr = [
         category: `entree`,
         popularity: 5,
         rating: 4,
-        tags: [`experimental`,`premium`,]
+        tags: [`experimental`,`premium`,`entree`]
     },
     {
         name: `Long Island Iced Tea`,
@@ -135,7 +135,7 @@ let foodArr = [
         category: `drinks`,
         popularity: 9,
         rating: 4.77,
-        tags: [`alcohol`,`cocktails`,`customer favorites`]
+        tags: [`alcohol`,`cocktails`,`customer favorites`,`drinks`]
     }
 ]
 
@@ -153,8 +153,8 @@ let foodArr = [
     your food objects has.
 */
 
-const filteredFood = foodArr.filter((foodArr, tag) => foodArr.tags === tag)
 
+const filteredFood = foodArr.filter(food => food.tags.includes(`meat`))
 console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
@@ -196,7 +196,19 @@ console.log(filteredFood)
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+const filterByProperty = (property, number, type) => {
+    let filteredFood; 
+    if (type === `above`) {
+        filteredFood = foodArr.filter((food) => {
+            return food[property] > number;
+        })
+    } else if (type === `below`) {
+        filteredFood = foodArr.filter((food) => {
+            return food[property] < number;
+        })
+    }  
+    return filteredFood;
+}
 
 
 /*
@@ -206,4 +218,4 @@ console.log(filteredFood)
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+console.log(filterByProperty(`price`, 15, `below`))
